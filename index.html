@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- start/stop -->
+  <!-- insert a "font awesome"-icon; default state -->
+  <p><a href="#"><i class="fa fa-volume-off fa-3x" id="toggle-speak-stop"></i></a></p>
+  <!-- ./start/stop -->
+
+  <!-- everything within the "text-to-read" class will be read -->
+  <h2 class="text-to-read">Hello World!</h2>
+  <p class="text-to-read">Even <b>tags</b> and <a href="https://en.wikipedia.org/wiki/Lorem_ipsum" target="_blank">links</a> are being ignored.</p>
+  <p class="text-to-read">And this works as well. Wow!</p>
+
+  <!-- load JS libraries -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="./PZEasyWebSpeech.js"></script>
+  <!-- actual call of library with specific settings -->
+  <script type="text/javascript">
+    PZEasyWebSpeech(
+      "toggle-speak-stop", // the id of the start/stop
+      "text-to-read", // the class name of which elements should be read
+      "fa-volume-up", // class added to start/stop when starting speech
+      "fa-volume-off", // class added to start/stop when ending speech 
+      "hidden", // class added to start/stop in case browser does not support speech and start/stop should be hidden
+      "en-GB", // language eg.: "en-GB", "en-US", "de-DE", etc
+      1 // volume, 0 to 1
+    );
+  </script>
+</body>
+</html>
