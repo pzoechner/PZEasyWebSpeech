@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Pzeasywebspeech : PZEasyWebSpeech makes it really easy to add speech support to your website">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Pzeasywebspeech</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/pzoechner/PZEasyWebSpeech">View on GitHub</a>
+
+          <h1 id="project_title">Pzeasywebspeech</h1>
+          <h2 id="project_tagline">PZEasyWebSpeech makes it really easy to add speech support to your website</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/pzoechner/PZEasyWebSpeech/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/pzoechner/PZEasyWebSpeech/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="pzeasywebspeech" class="anchor" href="#pzeasywebspeech" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>PZEasyWebSpeech</h1>
+
+<p>This JS-file makes it really easy to add speech support to your website. As a workaround for Chrome Browser, the speech is stopped after every full stop. To enhance the quality of speech, several (mostly closing) HTML-Tags are converted to full stops - feel free to add your own by modifying the "text" variable.</p>
+
+<h2>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h2>
+
+<p>An example of what the library does (V1.0.0) can be found <a href="http://fh.zoechner.com/branson/career/overview/">here</a>.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>The included <a href="https://github.com/pzoechner/PZEasyWebSpeech/blob/master/index.html">index.html</a> shows an implementation of the library.</p>
+
+<h3>
+<a id="1-startstop-button" class="anchor" href="#1-startstop-button" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1) Start/Stop Button</h3>
+
+<p>Add a custom class (here <code>toggle-speak-stop</code>) to the start/stop button element, defined as the first argument of the initialization.</p>
+
+<h3>
+<a id="2-text-to-read" class="anchor" href="#2-text-to-read" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2) Text to Read</h3>
+
+<p>To define what text should be read, add the <code>text-to-read</code> class to your paragraph or div. All HTML-Tags will be stripped from the string, so only the contained text will be read.</p>
+
+<h3>
+<a id="3-initialization" class="anchor" href="#3-initialization" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3) Initialization</h3>
+
+<p>Add this at the end of your HTML.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">PZEasyWebSpeech</span>(
+  <span class="pl-s"><span class="pl-pds">"</span>toggle-speak-stop<span class="pl-pds">"</span></span>, <span class="pl-c">// the id of the start/stop element</span>
+  <span class="pl-s"><span class="pl-pds">"</span>text-to-read<span class="pl-pds">"</span></span>,      <span class="pl-c">// the class name of which elements should be read</span>
+  <span class="pl-s"><span class="pl-pds">"</span>fa-volume-up<span class="pl-pds">"</span></span>,      <span class="pl-c">// class added to start/stop element when starting speech</span>
+  <span class="pl-s"><span class="pl-pds">"</span>fa-volume-off<span class="pl-pds">"</span></span>,     <span class="pl-c">// class added to start/stop element when ending speech </span>
+  <span class="pl-s"><span class="pl-pds">"</span>hidden<span class="pl-pds">"</span></span>,            <span class="pl-c">// class added to start/stop in case browser does not support speech and start/stop should be hidden</span>
+  <span class="pl-s"><span class="pl-pds">"</span>en-GB<span class="pl-pds">"</span></span>,             <span class="pl-c">// language eg.: "en-GB", "en-US", "de-DE", etc</span>
+  <span class="pl-c1">1</span>                    <span class="pl-c">// volume, 0 to 1</span>
+);</pre></div>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Pzeasywebspeech maintained by <a href="https://github.com/pzoechner">pzoechner</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
